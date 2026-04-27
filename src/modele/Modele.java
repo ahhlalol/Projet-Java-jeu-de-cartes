@@ -1,15 +1,11 @@
 package modele;
-
 import java.util.Observable;
-
 /**
  * Modele (logique du jeu) — pattern MVC.
  * Extends Observable : les vues s'abonnent et recoivent les mises a jour automatiquement.
  */
 public class Modele extends Observable {
-
     public enum Etat { CHOISIR, LANCER, ACTION, FINI }
-
     private Etat    etat;
     private Joueur  j1 = new Joueur("Joueur");
     private Joueur  j2 = new Joueur("Ennemi");
@@ -17,7 +13,6 @@ public class Modele extends Observable {
     private boolean koRemplace = false;
     private int     roundNum = 1;
     private String  message  = "Choisissez votre personnage actif";
-
     public Modele(java.util.List<Carte> deckJ1, java.util.List<Carte> deckJ2) {
         for (Carte c : deckJ1) j1.deck.ajouterCarte(c);
         for (Carte c : deckJ2) j2.deck.ajouterCarte(c);
@@ -242,3 +237,5 @@ public class Modele extends Observable {
     public boolean isEffetUtiliseJ1() { return j1.effetUtiliseCeTour; }
     public boolean isEffetUtiliseJ2() { return j2.effetUtiliseCeTour; }
 }
+
+    // fix etat initial
