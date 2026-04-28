@@ -1,18 +1,14 @@
 package modele;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.HashMap;
-
 /**
  * Base de donnees des effets speciaux (res/effets.csv).
  * HashMap<Integer,String> : acces au nom et a la description en O(1) par id.
  */
 public class CarteEffetDB {
-
     private static final HashMap<Integer,String> noms  = new HashMap<>();
     private static final HashMap<Integer,String> descs = new HashMap<>();
-
     static {
         try (BufferedReader br = new BufferedReader(new FileReader("res/effets.csv"))) {
             br.readLine(); // en-tete
@@ -35,3 +31,5 @@ public class CarteEffetDB {
     public static String getDesc(int id) { return descs.getOrDefault(id, ""); }
     public static int    nbEffets()      { return noms.size(); }
 }
+
+    // fix chemin

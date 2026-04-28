@@ -1,5 +1,4 @@
 package modele;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
@@ -8,7 +7,6 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.TreeMap;
-
 /**
  * Base de données des cartes personnages, chargée depuis res/cartes.csv.
  *
@@ -18,16 +16,13 @@ import java.util.TreeMap;
  *   TreeMap      → grouper les cartes par élément, trié A-Z automatiquement
  */
 public class CarteDB {
-
     private static List<Carte>                  toutes  = new ArrayList<>();
     private static HashMap<Integer, Carte>      parId   = new HashMap<>();
     private static TreeMap<String, List<Carte>> parElem = new TreeMap<>();
-
     // Comparateurs réutilisables dans VueIndex
     public static final Comparator<Carte> PAR_HP_DESC  = (a, b) -> b.getHpMax()   - a.getHpMax();
     public static final Comparator<Carte> PAR_ATK_DESC = (a, b) -> b.getAttaque() - a.getAttaque();
     public static final Comparator<Carte> PAR_NOM_ASC  = Comparator.comparing(Carte::getNom);
-
     // Chargement au démarrage du programme (bloc static = exécuté une seule fois)
     static {
         try {
@@ -122,3 +117,5 @@ public class CarteDB {
 
     public static int taille() { return toutes.size(); }
 }
+
+    // parsing csv virgules
