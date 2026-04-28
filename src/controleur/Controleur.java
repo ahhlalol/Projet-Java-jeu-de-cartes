@@ -1,17 +1,13 @@
 package controleur;
-
 import java.awt.Button;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import modele.Modele;
-
-
 /**
  * Controleur MVC : recoit les clics des boutons et appelle le Modele.
  * Joue un son de clic avant chaque action pour un retour immediat.
  */
 public class Controleur implements ActionListener {
-
     private final Modele mdl;
 
     public Controleur(Modele m) { mdl = m; }
@@ -29,3 +25,5 @@ public class Controleur implements ActionListener {
         }
     }
 }
+
+    // refacto

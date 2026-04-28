@@ -1,5 +1,4 @@
 package controleur;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Observable;
@@ -9,17 +8,13 @@ import modele.Carte;
 import modele.Deck;
 import modele.Des;
 import modele.Modele;
-
 public class IA implements Observer {
-
     Modele  modele;
     boolean enTrainDeJouer = false;
-
     public IA(Modele m) {
         modele = m;
         m.addObserver(this);
     }
-
     public void update(Observable o, Object arg) {
         if (modele.isJ1joue()) return;
         if (enTrainDeJouer)    return;
@@ -97,3 +92,5 @@ public class IA implements Observer {
         modele.tourTermine();
     }
 }
+
+    // fix double tour
