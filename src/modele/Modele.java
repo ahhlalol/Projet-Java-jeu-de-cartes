@@ -21,13 +21,10 @@ public class Modele extends Observable {
         j2.effetEnMain = (int)(Math.random() * 10) + 1;
         etat = Etat.CHOISIR;
     }
-
     // ── CHOISIR PERSONNAGE ────────────────────────────────────────────────────
-
     public void choisirPerso(int i) {
         if (etat != Etat.CHOISIR) return;
         Joueur joueur = J1joue ? j1 : j2;
-
         // Trouver la i-eme carte vivante
         Carte choix = null; int compte = 0;
         for (Carte c : joueur.deck.getCartes()) {
@@ -37,7 +34,6 @@ public class Modele extends Observable {
             for (Carte c : joueur.deck.getCartes())
                 if (c.getHp() > 0) choix = c;
         if (choix == null) return;
-
         joueur.perso = choix;
 
         if (koRemplace) {
@@ -239,3 +235,5 @@ public class Modele extends Observable {
 }
 
     // fix etat initial
+
+    // fin manche

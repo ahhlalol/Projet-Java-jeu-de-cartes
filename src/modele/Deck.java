@@ -7,3 +7,5 @@ public class Deck {
     public void ajouterCarte(Carte c) { cartes.add(c); }
     public List<Carte> getCartes()    { return cartes; }
 }
+
+    // pioche vide
