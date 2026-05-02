@@ -1,10 +1,8 @@
 package vue;
-
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import modele.Score;
 import modele.ScoreManager;
-
 /**
  * ÉCRAN D'ACCUEIL
  *
@@ -17,10 +15,8 @@ import modele.ScoreManager;
  * positionnés plus haut qu'avant (FlowLayout avec petit vgap).
  */
 public class VueAccueil extends Panel {
-
     private String texteScore = "";
     private Canvas canvas;
-
     public VueAccueil(Jeu j) {
         setLayout(new BorderLayout());
         setBackground(Theme.BG_DARK);
@@ -99,3 +95,5 @@ public class VueAccueil extends Panel {
         if (canvas != null) canvas.repaint();
     }
 }
+
+    // fond png

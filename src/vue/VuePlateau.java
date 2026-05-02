@@ -1,12 +1,10 @@
 package vue;
-
 import java.awt.*;
 import java.util.Observable;
 import java.util.Observer;
 import controleur.Controleur;
 import controleur.IA;
 import modele.Modele;
-
 /**
  * PLATEAU DE JEU PRINCIPAL
  *
@@ -27,11 +25,9 @@ import modele.Modele;
  * setBackground(ACCENT_GOLD) + BorderLayout(3,3) → séparateurs dorés entre les zones.
  */
 public class VuePlateau extends Panel {
-
     public VuePlateau(Modele m, Controleur c, Jeu j) {
         setBackground(Theme.ACCENT_GOLD); // les gaps 3px apparaissent en doré
         setLayout(new BorderLayout(3, 3));
-
         // L'IA s'abonne au Modele ici — elle jouera seule quand c'est son tour
         new IA(m);
 
@@ -132,3 +128,5 @@ public class VuePlateau extends Panel {
         public void update(Observable o, Object arg) { repaint(); }
     }
 }
+
+    // layout
