@@ -35,7 +35,6 @@ public class Modele extends Observable {
                 if (c.getHp() > 0) choix = c;
         if (choix == null) return;
         joueur.perso = choix;
-
         if (koRemplace) {
             koRemplace = false;
             etat = Etat.ACTION;
@@ -48,9 +47,7 @@ public class Modele extends Observable {
             updateView("Pret ! Cliquez PIOCHER ENERGIES");
         }
     }
-
     // ── LANCER LES DES ───────────────────────────────────────────────────────
-
     public void lancer() {
         if (etat != Etat.LANCER) return;
         j1.des.relancer(); j2.des.relancer();
@@ -58,9 +55,7 @@ public class Modele extends Observable {
         etat = Etat.ACTION; J1joue = true;
         message = "ROUND " + roundNum + " - A vous !"; updateView();
     }
-
     // ── ATTAQUER ─────────────────────────────────────────────────────────────
-
     public void attaquer() {
         if (etat != Etat.ACTION) return;
         Joueur att = J1joue ? j1 : j2, def = J1joue ? j2 : j1;
@@ -237,3 +232,5 @@ public class Modele extends Observable {
     // fix etat initial
 
     // fin manche
+
+    // fix nullpointer
