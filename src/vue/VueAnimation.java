@@ -1,20 +1,16 @@
 package vue;
-
 import java.awt.*;
 import java.awt.event.*;
 import java.util.Observable;
 import java.util.Observer;
 import javax.swing.Timer;
 import modele.Modele;
-
 /** GIF anime central (2s) selon le type d'action en cours. */
 public class VueAnimation extends Panel implements Observer {
-
     private final Image gifAttaque     = Toolkit.getDefaultToolkit().getImage("res/gifs/attaque.gif");
     private final Image gifHealed      = Toolkit.getDefaultToolkit().getImage("res/gifs/healed.gif");
     private final Image gifFrustration = Toolkit.getDefaultToolkit().getImage("res/gifs/frustration.gif");
     private final Image gifRage        = Toolkit.getDefaultToolkit().getImage("res/gifs/rage.gif");
-
     private Image gifActuel = null;
     private boolean visible = false;
     private Timer timerCache;
@@ -57,3 +53,5 @@ public class VueAnimation extends Panel implements Observer {
         }
     }
 }
+
+    // 4 gifs contextuels

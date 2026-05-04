@@ -30,7 +30,6 @@ public class VuePlateau extends Panel {
         setLayout(new BorderLayout(3, 3));
         // L'IA s'abonne au Modele ici — elle jouera seule quand c'est son tour
         new IA(m);
-
         // ── Zone centrale : rangées de cartes + animation GIF ──────────────
         Panel centre = new Panel(new BorderLayout(0, 3));
         centre.setBackground(Theme.BG_DARK);
@@ -38,13 +37,11 @@ public class VuePlateau extends Panel {
         centre.add(new VueAnimation(m), BorderLayout.CENTER); // animation centrale
         centre.add(rangee(m, true),     BorderLayout.SOUTH);  // cartes joueur
         add(centre, BorderLayout.CENTER);
-
         // ── Panneau gauche : round + boutons d'action ──────────────────────
         Panel gauche = new Panel(new BorderLayout(0, 3));
         gauche.setBackground(Theme.BG_DARK);
         gauche.setPreferredSize(new Dimension(222, 0));
         gauche.add(new VueMessage(m), BorderLayout.NORTH);
-
         // CardLayout : bascule entre les boutons de jeu et l'écran de fin
         CardLayout cl = new CardLayout();
         Panel switchPanel = new Panel(cl);
@@ -52,7 +49,6 @@ public class VuePlateau extends Panel {
         switchPanel.add(new VueGagnant(m, cl, switchPanel, j), "fin");
         cl.show(switchPanel, "jeu");
         gauche.add(switchPanel, BorderLayout.CENTER);
-
         add(gauche, BorderLayout.WEST);
 
         // ── Panneau droit : effets en main ─────────────────────────────────
@@ -130,3 +126,5 @@ public class VuePlateau extends Panel {
 }
 
     // layout
+
+    // double buffer
