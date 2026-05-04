@@ -71,7 +71,6 @@ public class Modele extends Observable {
         message = att.perso.getNom() + " attaque pour " + d + " degats !";
         if (!verifierMort()) switchTour();
     }
-
     public void superAttaquer() {
         if (etat != Etat.ACTION) return;
         Joueur att = J1joue ? j1 : j2, def = J1joue ? j2 : j1;
@@ -87,7 +86,6 @@ public class Modele extends Observable {
         message = att.perso.getNom() + " SUPER attaque pour " + d + " degats !";
         if (!verifierMort()) switchTour();
     }
-
     private int calcDegats(Joueur att, Joueur def) {
         int atk = att.perso.getAttaque() + att.rage;
         if (att.boost)    { atk *= 2;            att.boost    = false; }
@@ -95,7 +93,6 @@ public class Modele extends Observable {
         if (def.bouclier) { atk /= 2;             def.bouclier= false; }
         return Math.max(0, atk);
     }
-
     // ── SOIN ─────────────────────────────────────────────────────────────────
 
     /** Soin cible : clic sur une carte en main. Cout = 3 des. */
@@ -234,3 +231,5 @@ public class Modele extends Observable {
     // fin manche
 
     // fix nullpointer
+
+    // reactions elem

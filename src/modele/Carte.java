@@ -27,3 +27,5 @@ public class Carte extends Observable {
     public boolean isEnsanglantee()           { return ensanglantee; }
     public void    setEnsanglantee(boolean b) { ensanglantee = b; }
 }
+
+    // observer hp
