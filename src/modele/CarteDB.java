@@ -28,7 +28,6 @@ public class CarteDB {
         try {
             BufferedReader br = new BufferedReader(new FileReader("res/cartes.csv"));
             br.readLine(); // sauter la ligne d'en-tête
-
             String ligne = br.readLine();
             while (ligne != null) {
                 String[] col = ligne.split(";");
@@ -39,12 +38,9 @@ public class CarteDB {
                     int    attaque = Integer.parseInt(col[3].trim());
                     int    heal    = Integer.parseInt(col[4].trim());
                     String element = col[5].trim();
-
                     Carte c = new Carte(nom, hp, attaque, heal, element, id);
-
                     toutes.add(c);
                     parId.put(id, c); // HashMap : clé = id, valeur = carte
-
                     // Ajouter à la liste de son élément dans le TreeMap
                     if (!parElem.containsKey(element)) {
                         parElem.put(element, new ArrayList<>());
@@ -54,7 +50,6 @@ public class CarteDB {
                 ligne = br.readLine();
             }
             br.close();
-
         } catch (Exception e) {
             System.out.println("Erreur lecture cartes.csv : " + e.getMessage());
         }
@@ -119,3 +114,5 @@ public class CarteDB {
 }
 
     // parsing csv virgules
+
+    // cache hashmap treemap

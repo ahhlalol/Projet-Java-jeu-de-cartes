@@ -1,9 +1,7 @@
 package modele;
-
 import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
-
 /**
  * Sauvegarde et charge le classement des meilleurs scores.
  *
@@ -11,10 +9,8 @@ import java.util.*;
  * Persistance : serialisation binaire dans res/scores.dat.
  */
 public class ScoreManager {
-
     private static final String FICHIER    = "res/scores.dat";
     private static final int    MAX_SCORES = 5;
-
     @SuppressWarnings("unchecked")
     public static TreeSet<Score> chargerClassement() {
         File f = new File(FICHIER);
@@ -44,3 +40,5 @@ public class ScoreManager {
         } catch (Exception e) { System.out.println("Erreur sauvegarde : " + e.getMessage()); }
     }
 }
+
+    // serialisation
