@@ -18,7 +18,6 @@ public class IA implements Observer {
     public void update(Observable o, Object arg) {
         if (modele.isJ1joue()) return;
         if (enTrainDeJouer)    return;
-
         if (modele.getEtat() == Modele.Etat.CHOISIR) {
             enTrainDeJouer = true;
             new Timer(600, new ActionListener() {
@@ -37,12 +36,10 @@ public class IA implements Observer {
                 }
             }).start();
         }
-
         if (modele.getEtat() == Modele.Etat.ACTION) {
             jouerApresDelai();
         }
     }
-
     void jouerApresDelai() {
         if (enTrainDeJouer) return;
         enTrainDeJouer = true;
@@ -58,7 +55,6 @@ public class IA implements Observer {
             }
         }).start();
     }
-
     void choisirPerso() {
         Deck deck        = modele.getMainJ2();
         int  meilleurIdx = 0;
@@ -94,3 +90,5 @@ public class IA implements Observer {
 }
 
     // fix double tour
+
+    // meilleure strat
