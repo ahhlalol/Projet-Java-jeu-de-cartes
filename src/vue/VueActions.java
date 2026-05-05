@@ -1,5 +1,4 @@
 package vue;
-
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
@@ -9,7 +8,6 @@ import java.util.Observer;
 import javax.imageio.ImageIO;
 import javax.swing.JOptionPane;
 import modele.Modele;
-
 /**
  * BOUTONS D'ACTION DU JOUEUR
  *
@@ -21,7 +19,6 @@ import modele.Modele;
  * pour laisser l'image transparaître.
  */
 public class VueActions extends Panel implements Observer {
-
     private final Modele modele;
     private final Jeu    jeu;
     private BufferedImage bgImage;
@@ -114,3 +111,5 @@ public class VueActions extends Panel implements Observer {
     // Observer : rafraîchit uniquement si l'état visuel a changé
     public void update(Observable o, Object arg) { repaint(); }
 }
+
+    // pause

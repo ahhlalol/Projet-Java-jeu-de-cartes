@@ -1,5 +1,4 @@
 package vue;
-
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
@@ -8,7 +7,6 @@ import java.util.List;
 import javax.swing.Timer;
 import modele.Carte;
 import modele.CarteDB;
-
 /**
  * Écran de sélection des 3 personnages.
  * Affiche 20 cartes au hasard (5 cols × 4 lignes).
@@ -22,10 +20,8 @@ import modele.CarteDB;
  *   affichées → aucun accès disque pendant dessiner().
  */
 public class VueSelection extends Panel {
-
     private static final int CW = 108, CH = 185, COLS = 5, ROWS = 4, GAP = 15;
     private static final int NB_AFFICHES = COLS * ROWS; // 20
-
     private final Jeu           jeu;
     private final List<Integer> affichees = new ArrayList<>();
     private final List<Integer> choix     = new ArrayList<>();
@@ -207,3 +203,5 @@ public class VueSelection extends Panel {
         }
     }
 }
+
+    // fix selection
