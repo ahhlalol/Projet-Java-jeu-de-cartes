@@ -23,3 +23,5 @@ public class Des extends Observable {
         setChanged(); notifyObservers();
     }
 }
+
+    // fix min

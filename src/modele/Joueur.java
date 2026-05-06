@@ -19,3 +19,5 @@ public class Joueur {
     }
     public void resetRound() { roundFini=false; rage=0; invincible=false; effetUtiliseCeTour=false; }
 }
+
+    // flags
