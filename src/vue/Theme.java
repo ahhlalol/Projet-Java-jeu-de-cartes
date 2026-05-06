@@ -1,18 +1,15 @@
 package vue;
-
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.FontFormatException;
 import java.awt.GraphicsEnvironment;
 import java.io.File;
 import java.io.IOException;
-
 /**
  * Constantes visuelles : palette, polices — source unique de verite.
  * Police Cinzel : placer Cinzel-Regular.ttf dans res/fonts/ (gratuit sur fonts.google.com).
  */
 public final class Theme {
-
     private Theme() {}
 
     // ── Palette ──────────────────────────────────────────────────────────────
@@ -67,3 +64,5 @@ public final class Theme {
         }
     }
 }
+
+    // polices couleurs
