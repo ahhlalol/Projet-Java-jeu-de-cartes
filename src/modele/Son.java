@@ -1,9 +1,7 @@
 package modele;
-
 import javax.sound.sampled.*;
 import java.io.*;
 import java.util.HashMap;
-
 /**
  * GESTION DES SONS — cache en RAM pour une lecture instantanée
  *
@@ -14,7 +12,6 @@ import java.util.HashMap;
  * Chaque son est joué dans un Thread séparé pour ne pas bloquer l'UI.
  */
 public class Son {
-
     private static final String DOSSIER = "res/Sons/";
 
     // Cache : nom du fichier → contenu binaire en mémoire
@@ -97,3 +94,5 @@ public class Son {
 
     public static void playClic() { play("clic.wav"); }
 }
+
+    // fix chemin
