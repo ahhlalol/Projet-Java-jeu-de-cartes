@@ -24,12 +24,10 @@ public class ScoreManager {
         } catch (Exception e) { System.out.println("Erreur scores : " + e.getMessage()); }
         return new TreeSet<>();
     }
-
     public static Score charger() {
         TreeSet<Score> ts = chargerClassement();
         return ts.isEmpty() ? null : ts.first();
     }
-
     public static void sauvegarderSiMeilleur(int nbRounds) {
         String date = new SimpleDateFormat("dd/MM/yyyy").format(new Date());
         TreeSet<Score> classement = chargerClassement();
@@ -40,5 +38,6 @@ public class ScoreManager {
         } catch (Exception e) { System.out.println("Erreur sauvegarde : " + e.getMessage()); }
     }
 }
-
     // serialisation
+
+    // treeset scores

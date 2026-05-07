@@ -54,7 +54,6 @@ public class CarteDB {
             System.out.println("Erreur lecture cartes.csv : " + e.getMessage());
         }
     }
-
     /**
      * Retourne une copie fraîche d'une carte par son ID.
      * HashMap.get(id) = accès direct en O(1), sans parcourir la liste.
@@ -65,7 +64,6 @@ public class CarteDB {
         return new Carte(c.getNom(), c.getHpMax(), c.getAttaque(),
                          c.getHeal(), c.getElement(), c.getId());
     }
-
     /** Copie de toutes les cartes (nouvelles instances pour éviter les modifications). */
     public static List<Carte> toutes() {
         List<Carte> copie = new ArrayList<>();
@@ -75,7 +73,6 @@ public class CarteDB {
         }
         return copie;
     }
-
     /**
      * Filtrage multi-critères avec tri optionnel (Collections.sort + Comparator).
      * Si un élément est spécifié, on cherche dans le TreeMap (plus rapide).
@@ -116,3 +113,5 @@ public class CarteDB {
     // parsing csv virgules
 
     // cache hashmap treemap
+
+    // copie defensive
