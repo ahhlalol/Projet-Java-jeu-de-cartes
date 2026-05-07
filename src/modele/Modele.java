@@ -94,7 +94,6 @@ public class Modele extends Observable {
         return Math.max(0, atk);
     }
     // ── SOIN ─────────────────────────────────────────────────────────────────
-
     /** Soin cible : clic sur une carte en main. Cout = 3 des. */
     public void healer(int i) {
         if (etat != Etat.ACTION) return;
@@ -106,7 +105,6 @@ public class Modele extends Observable {
         cible.touche(-soin);
         message = cible.getNom() + " recupere " + soin + " HP"; switchTour();
     }
-
     /** Soin du personnage actif (bouton SOIN). Cout = 3 des. */
     public void healerActif() {
         if (etat != Etat.ACTION) return;
@@ -117,7 +115,6 @@ public class Modele extends Observable {
         joueur.perso.touche(-soin);
         message = joueur.perso.getNom() + " se soigne de " + soin + " HP"; switchTour();
     }
-
     // ── EFFETS SPECIAUX ───────────────────────────────────────────────────────
 
     public void utiliserEffet() {
@@ -233,3 +230,5 @@ public class Modele extends Observable {
     // fix nullpointer
 
     // reactions elem
+
+    // effets cartes ok
