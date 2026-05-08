@@ -26,10 +26,10 @@ public class CarteEffetDB {
             System.out.println("Erreur lecture effets.csv : " + e.getMessage());
         }
     }
-
     public static String getNom(int id)  { return noms.getOrDefault(id,  "Effet " + id); }
     public static String getDesc(int id) { return descs.getOrDefault(id, ""); }
     public static int    nbEffets()      { return noms.size(); }
 }
-
     // fix chemin
+
+    // ok

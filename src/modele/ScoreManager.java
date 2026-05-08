@@ -39,5 +39,6 @@ public class ScoreManager {
     }
 }
     // serialisation
-
     // treeset scores
+
+    // sauvegarde ok
