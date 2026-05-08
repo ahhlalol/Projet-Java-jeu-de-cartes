@@ -116,7 +116,6 @@ public class Modele extends Observable {
         message = joueur.perso.getNom() + " se soigne de " + soin + " HP"; switchTour();
     }
     // ── EFFETS SPECIAUX ───────────────────────────────────────────────────────
-
     public void utiliserEffet() {
         if (etat != Etat.ACTION) return;
         Joueur joueur = J1joue ? j1 : j2;
@@ -232,3 +231,5 @@ public class Modele extends Observable {
     // reactions elem
 
     // effets cartes ok
+
+    // v1.0
