@@ -9,9 +9,7 @@ import modele.Modele;
  */
 public class Controleur implements ActionListener {
     private final Modele mdl;
-
     public Controleur(Modele m) { mdl = m; }
-
     @Override
     public void actionPerformed(ActionEvent e) {
         String nom = ((Button) e.getSource()).getName();
@@ -27,3 +25,5 @@ public class Controleur implements ActionListener {
 }
 
     // refacto
+
+    // version finale
