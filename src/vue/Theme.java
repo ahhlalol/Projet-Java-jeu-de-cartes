@@ -11,7 +11,6 @@ import java.io.IOException;
  */
 public final class Theme {
     private Theme() {}
-
     // ── Palette ──────────────────────────────────────────────────────────────
     public static final Color BG_DARK       = new Color(12, 10, 25);
     public static final Color BG_PANEL      = new Color(20, 18, 35);
@@ -66,3 +65,5 @@ public final class Theme {
 }
 
     // polices couleurs
+
+    // final

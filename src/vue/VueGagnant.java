@@ -1,5 +1,4 @@
 package vue;
-
 import java.awt.*;
 import java.awt.event.*;
 import java.util.Observable;
@@ -8,7 +7,6 @@ import modele.Modele;
 import modele.Score;
 import modele.ScoreManager;
 import modele.Son;
-
 /** Ecran de fin de partie : VICTOIRE ou DEFAITE. */
 public class VueGagnant extends Panel implements Observer {
 
@@ -51,3 +49,5 @@ public class VueGagnant extends Panel implements Observer {
         repaint();
     }
 }
+
+    // affichage gagnant
