@@ -15,3 +15,9 @@ src/modele/     : logique metier
 src/vue/        : interface graphique
 src/controleur/ : Controleur + IA
 res/            : CSV, images, sons, gifs
+
+## Regles
+- deck de cartes elementaires
+- des pour les actions
+- reactions elementaires
+- le plus de points gagne
