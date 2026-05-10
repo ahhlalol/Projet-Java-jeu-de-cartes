@@ -1,10 +1,7 @@
 package vue;
-
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
-
-
 /**
  * Bouton cliquable avec une image PNG a la place du texte.
  * Joue un son de clic automatiquement quand il est actif.
@@ -46,3 +43,5 @@ public class BoutonImage extends Canvas {
     }
     public void update(Graphics g) { paint(g); }
 }
+
+    // opacite

@@ -1,5 +1,4 @@
 package vue;
-
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
@@ -7,7 +6,6 @@ import java.util.Observable;
 import java.util.Observer;
 import javax.swing.Timer;
 import modele.*;
-
 /**
  * Affiche les 3 cartes d'un joueur.
  *
@@ -20,11 +18,9 @@ import modele.*;
  *   Un Timer remet flashDmg[i]/flashSoin[i] à false après 350/500ms → repaint().
  */
 public class VueCartes extends Panel implements Observer, MouseListener {
-
     private final Modele  modele;
     private final boolean estJ1;
     private static final int CW = 140, CH = 240, PAD = 20;
-
     private final boolean[] flashDmg  = new boolean[3];
     private final boolean[] flashSoin = new boolean[3];
     private final int[]     hpAvant   = new int[3];
@@ -172,3 +168,5 @@ public class VueCartes extends Panel implements Observer, MouseListener {
     public void mouseEntered(MouseEvent e)  {}
     public void mouseExited(MouseEvent e)   {}
 }
+
+    // flash hp

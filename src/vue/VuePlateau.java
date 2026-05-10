@@ -1,12 +1,10 @@
 package vue;
-
 import java.awt.*;
 import java.util.Observable;
 import java.util.Observer;
 import controleur.Controleur;
 import controleur.IA;
 import modele.Modele;
-
 /**
  * PLATEAU DE JEU PRINCIPAL
  *
@@ -27,14 +25,11 @@ import modele.Modele;
  * setBackground(ACCENT_GOLD) + BorderLayout(3,3) → séparateurs dorés entre les zones.
  */
 public class VuePlateau extends Panel {
-
     public VuePlateau(Modele m, Controleur c, Jeu j) {
         setBackground(Theme.ACCENT_GOLD); // les gaps 3px apparaissent en doré
         setLayout(new BorderLayout(3, 3));
-
         // L'IA s'abonne au Modele ici — elle jouera seule quand c'est son tour
         new IA(m);
-
         // ── Zone centrale : rangées de cartes + animation GIF ──────────────
         Panel centre = new Panel(new BorderLayout(0, 3));
         centre.setBackground(Theme.BG_DARK);
@@ -42,13 +37,11 @@ public class VuePlateau extends Panel {
         centre.add(new VueAnimation(m), BorderLayout.CENTER); // animation centrale
         centre.add(rangee(m, true),     BorderLayout.SOUTH);  // cartes joueur
         add(centre, BorderLayout.CENTER);
-
         // ── Panneau gauche : round + boutons d'action ──────────────────────
         Panel gauche = new Panel(new BorderLayout(0, 3));
         gauche.setBackground(Theme.BG_DARK);
         gauche.setPreferredSize(new Dimension(222, 0));
         gauche.add(new VueMessage(m), BorderLayout.NORTH);
-
         // CardLayout : bascule entre les boutons de jeu et l'écran de fin
         CardLayout cl = new CardLayout();
         Panel switchPanel = new Panel(cl);
@@ -56,9 +49,7 @@ public class VuePlateau extends Panel {
         switchPanel.add(new VueGagnant(m, cl, switchPanel, j), "fin");
         cl.show(switchPanel, "jeu");
         gauche.add(switchPanel, BorderLayout.CENTER);
-
         add(gauche, BorderLayout.WEST);
-
         // ── Panneau droit : effets en main ─────────────────────────────────
         Panel droite = new Panel(new GridLayout(2, 1, 0, 3));
         droite.setBackground(Theme.BG_DARK);
@@ -66,12 +57,10 @@ public class VuePlateau extends Panel {
         droite.add(new VuePioche(m, false)); // effet IA (en haut)
         droite.add(new VuePioche(m, true));  // effet joueur (en bas)
         add(droite, BorderLayout.EAST);
-
         // ── Bandeau instructions en bas (pleine largeur) ───────────────────
         // Affiche le message courant du jeu + le hint "clic carte = soin"
         add(new BandeauInstructions(m), BorderLayout.SOUTH);
     }
-
     /** Crée une rangée = dés (gauche) + 3 cartes (centre) pour un joueur. */
     private Panel rangee(Modele m, boolean j1) {
         Panel p = new Panel(new BorderLayout(3, 0));
@@ -132,3 +121,9 @@ public class VuePlateau extends Panel {
         public void update(Observable o, Object arg) { repaint(); }
     }
 }
+
+    // layout
+
+    // double buffer
+
+    // fix deck vide

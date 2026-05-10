@@ -1,5 +1,4 @@
 package vue;
-
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
@@ -8,7 +7,6 @@ import java.util.List;
 import modele.Carte;
 import modele.CarteDB;
 import modele.CarteEffetDB;
-
 /**
  * INDEX DES CARTES — encyclopédie scrollable
  *
@@ -25,15 +23,12 @@ import modele.CarteEffetDB;
  *    Sans ce cache, les 40 images étaient redessinées à chaque scroll.
  */
 public class VueIndex extends Panel {
-
     private final Jeu       jeu;
     private List<Carte>     resultats  = new ArrayList<>();
     private boolean         precharge  = false; // préchargé une seule fois
-
     // Cache de rendu de la grille — invalidé à chaque filtrage
     private BufferedImage   grilleCache;
     private int             cacheCols, cacheRows; // dimensions au moment du rendu
-
     private final TextField champNom  = new TextField("", 12);
     private final Choice    choixElem = new Choice();
     private final TextField champHP   = new TextField("0", 3);
@@ -253,3 +248,5 @@ public class VueIndex extends Panel {
         return l;
     }
 }
+
+    // filtres et scroll

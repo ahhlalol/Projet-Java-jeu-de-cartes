@@ -1,32 +1,25 @@
 package vue;
-
 import java.awt.*;
 import java.awt.event.*;
 import java.util.Observable;
 import java.util.Observer;
 import javax.swing.Timer;
 import modele.Modele;
-
 /** GIF anime central (2s) selon le type d'action en cours. */
 public class VueAnimation extends Panel implements Observer {
-
     private final Image gifAttaque     = Toolkit.getDefaultToolkit().getImage("res/gifs/attaque.gif");
     private final Image gifHealed      = Toolkit.getDefaultToolkit().getImage("res/gifs/healed.gif");
     private final Image gifFrustration = Toolkit.getDefaultToolkit().getImage("res/gifs/frustration.gif");
     private final Image gifRage        = Toolkit.getDefaultToolkit().getImage("res/gifs/rage.gif");
-
     private Image gifActuel = null;
     private boolean visible = false;
     private Timer timerCache;
-
     public VueAnimation(Modele m) {
         m.addObserver(this);
         setBackground(new Color(14, 12, 26));
         setPreferredSize(new Dimension(0, 220));
     }
-
     public void update(Graphics g) { paint(g); }
-
     public void update(Observable o, Object arg) {
         String msg = ((Modele)o).getMessage();
         if      (msg.contains("SUPER attaque"))                        montrer(gifRage);
@@ -57,3 +50,7 @@ public class VueAnimation extends Panel implements Observer {
         }
     }
 }
+
+    // 4 gifs contextuels
+
+    // fix EDT

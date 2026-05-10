@@ -1,5 +1,4 @@
 package vue;
-
 import java.awt.*;
 import java.util.Observable;
 import java.util.Observer;
@@ -44,3 +43,5 @@ public class VueMessage extends Panel implements Observer {
 
     public void update(Observable o, Object arg) { repaint(); }
 }
+
+    // message ok
