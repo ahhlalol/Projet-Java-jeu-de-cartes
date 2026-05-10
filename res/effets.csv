@@ -1,0 +1,11 @@
+id;nom;description
+1;BOOSTER;Prochaine attaque multipliee par 2
+2;COMBO;Prochaine attaque multipliee par 1.5
+3;SOIN;Restaure 5 HP au personnage actif
+4;GRAND SOIN;Restaure 10 HP au personnage actif
+5;INVINCIBLE;Immunite aux degats ce tour
+6;PURIFICATION;Toute l equipe recupere 2 HP
+7;BOUCLIER;Prochain coup recu divise par 2
+8;DES BONUS;Ajoute 3 des Omni a ta reserve
+9;ECLAIR;Inflige 4 degats directs a l adversaire
+10;RELANCE;Relance tous tes des

@@ -1,5 +1,7 @@
 package modele;
+
 import java.io.Serializable;
+
 /**
  * Un score : nombre de rounds pour gagner + date.
  * Implements Comparable pour etre classe dans un TreeSet (moins de rounds = meilleur).
@@ -26,5 +28,3 @@ public class Score implements Serializable, Comparable<Score> {
 
     @Override public String toString() { return nbRounds + " rounds  (" + date + ")"; }
 }
-
-    // compareTo
